@@ -1,5 +1,4 @@
-# Danny-T.co.uk
+tinderbox-theme
+===============
 
-wordpress theme for http://danny-t.co.uk
-
-Build script depends on IIS Express
+Theme for tinderboxacoustic.com
