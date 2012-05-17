@@ -16,8 +16,6 @@
 
 	<!-- tools used to assist the build process. -->
 	<property name="tools.dir" value="${basedir}/build/tools" />
-	<property name="yuicompressor.jar" value="${tools.dir}/yuicompressor-2.4.6/yuicompressor-2.4.6.jar" />
-	<property name="lessc.cmd" value="${tools.dir}/lessc/lessc.cmd" />
 	<property name="iisexpress.bat" value="${tools.dir}/iisexpress/iisexpresslauncher.bat" />
 
 	<!-- directory where all the script src is located. -->
@@ -26,7 +24,6 @@
 	<!-- css information -->
 	<property name="css.dir" value="${deploy.dir}/css" />
 	<property name="css.src.dir" value="${scripts.dir}/css" />
-	<property name="less.src.dir" value="${scripts.dir}/less" />
 
 	<!-- js information -->
 	<property name="js.dir" value="${deploy.dir}/js" />
@@ -34,7 +31,7 @@
 	<property name="js.libs.src.dir" value="${js.src.dir}\libs" />
 
 	<!-- specifies the order of the build process -->
-	<target name="default" depends="clean, prepare, less, css, js, php, deploy" />
+	<target name="default" depends="clean, prepare, css, js, php, deploy" />
 
 	<!-- deletes any folders that would have been created from a previous build. -->
 	<target name="clean">
@@ -49,13 +46,6 @@
 		<mkdir dir="${js.dir}" />
 	</target>
 
-	<!-- converts any .less files into .css files. -->
-	<target name="less">
-		<exec dir="${basedir}" executable="${lessc.cmd}" failifexecutionfails='true' failonerror="true">
-			<arg line='"${less.src.dir}/style.less" "${css.dir}/site.css"' />
-		</exec>
-	</target>
-
 	<!-- 
 		joins all the required css files into a single css file that can be loaded individually to save
 		any bottleneck that can be caused by too many css / js requests on load.
@@ -64,7 +54,7 @@
 		<concat destfile="${deploy.dir}/style.css" overwrite="yes">
 			<fileset file="${css.src.dir}/theme-info.css" />
 			<fileset file="${css.src.dir}/normalize.css" />
-			<fileset file="${css.dir}/site.css" />
+			<fileset file="${css.dir}/style.css" />
 		</concat>
 	</target>
 
@@ -76,10 +66,7 @@
 	-->
 	<target name="js">
 		<!-- modenizr is not included in the plugins as it is loaded in the <head> tag. -->
-		<copy todir="${js.dir}" file="${js.libs.src.dir}\modernizr-2.0.6.min.js" />
-		<copy tofile="${js.dir}\xui.min.js" file="${js.libs.src.dir}\xui-2.3.2.min.js" />
-		<copy tofile="${js.dir}\xui-bb.min.js"  file="${js.libs.src.dir}\xui-bb-2.3.2.min.js" />
-		<copy tofile="${js.dir}\xui-ie.min.js"  file="${js.libs.src.dir}\xui-ie-2.3.2.min.js" />
+		<copy todir="${js.dir}" file="${js.libs.src.dir}\modernizr-2.5.3.min.js" />
 
 		<!-- 
 			copies the custom script files to the js folder, when more custom 

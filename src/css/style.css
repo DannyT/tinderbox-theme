@@ -1,0 +1,262 @@
+/* General */
+body {
+	background: white;
+	color: black;
+	font:.6251em/1 Helvetica, Arial, "sans-serif";
+	line-height: 1;
+	margin: 0px auto;
+	padding: 0;
+	width: 990px;
+}
+
+p
+{
+	font-weight: normal;
+	padding-bottom: 10px;
+}
+
+strong
+{
+	font-weight:bold;
+}
+
+em
+{
+	font-style: italic;
+}
+
+small
+{
+	color: gray;
+	font-size: 0.9em;
+}
+
+a
+{
+	cursor: pointer;
+	cursor: hand;
+	color: black;
+}
+
+a:visited
+{
+	color: gray;
+}
+
+.clear
+{
+	clear: both;
+}
+
+
+.alignleft 
+{
+	float: left;
+}
+
+.alignright 
+{
+	float: right;
+}
+
+img.alignleft
+{
+	margin: 0 3px 2px 7px;
+	padding: 4px;
+}
+
+img.alignright
+{
+	margin: 0 7px 2px 3px;
+	padding: 4px;
+}
+
+/* Header */
+
+header h1{
+	background: url(../images/tinderbox_hdr.jpg) no-repeat;
+	font-size: 436px;
+	margin: 0;
+	padding: 0;
+}
+
+header h1 a{
+	display:block;
+	text-indent:-999em;
+	overflow: hidden;
+}
+
+#headerimg 	{
+	margin: 0;
+	height: 436px;
+	width: 998;
+}
+
+.header_widget
+{
+	clear: right;
+	float:right;
+	padding-top: 40px;
+	padding-right:15px;
+}
+
+ul.contact_buttons {
+	list-style: none; 
+	list-style-image: none; 
+	position: absolute;
+	top:90px;
+	padding-left:850px;
+}
+
+ul.contact_buttons li {
+	display: inline;
+}
+
+/* end Header */
+
+/* Content */
+#content {
+	font-size: 1.4em;
+	line-height:1.714286em;
+	overflow:hidden;
+}
+
+.narrowcolumn 
+{
+	float: left;
+	padding-right: 30px;
+	width: 750px;
+}
+
+#content h2
+{
+	font-size:2.5em;
+	font-weight: 400;
+	text-transform:capitalize;
+	position:relative;
+	z-index:10;
+	line-height:1;
+	letter-spacing:-2px;
+	text-shadow:0 1px 0 #dad8d5;
+}
+
+#content h2, #content h2 a
+{
+	color:#461E12;
+	text-decoration:none;
+}
+
+#content h2 a:hover
+{
+	color: #939393;
+}
+
+#content h3
+{
+	color: #461E12;
+	font-size: 1em;
+	font-weight: bold;
+}
+
+#content .hentry
+{
+	margin-bottom: 20px;
+	float: left;
+	width: 100%;
+}
+
+.navigation 
+{
+	text-align: center;
+	margin-bottom: 10px;
+	width: 100%;
+}
+
+/* end content */
+
+/* Featured Post */
+#content .featuredpost
+{
+	border: 3px #461E12 solid;
+	float: left;
+	margin-bottom: 20px;
+	width:100%;
+}
+
+.featuredpost h3
+{
+	display: none;
+}
+
+#content .featuredpost h2 a
+{
+	background: #461E12;
+	color: white;
+	display: block;
+	font-size: 0.8em;
+	outline-color: white;
+}
+
+#content .featuredpost p
+{
+	float: right;
+	width: 100%;
+}
+
+/* end featuredpost */
+
+/* sidebar */
+#sidebar 
+{
+	float: right;
+	font-size: 1.4em;
+	width: 210px;
+}
+
+#sidebar h2
+{
+	color:#461E12;
+	font-size:2.0em;
+	font-weight: 400;
+	text-decoration:none;
+	text-transform:uppercase;
+	line-height:1;
+	letter-spacing:-2px;
+	text-shadow:0 1px 0 #dad8d5;
+}
+
+#sidebar .widget
+{
+	padding-bottom: 30px;
+}
+
+/* Menu */
+#sidebar ul ul li:before
+{
+	content: "\00BB \0020";
+}
+
+#sidebar ul ul li a
+{
+	color: #461E12;
+	font-weight: bold;
+	line-height: 1.5;
+	text-decoration: none;
+}
+
+#sidebar ul ul li a:hover
+{
+	color: #939393;
+}
+/* end menu */
+
+/* Gigs */
+#sidebar #next-gig
+{
+	line-height: 1.5;
+}
+#sidebar #next-gig .eventName
+{
+	font-size: 1.2em;
+	font-weight: bold;
+}

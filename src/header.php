@@ -19,28 +19,30 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
 
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
-  <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/style.css">
+  <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/css/style.css">
   <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
 
   <!-- All JavaScript at the bottom, except this Modernizr build incl. Respond.js
        Respond is a polyfill for min/max-width media queries. Modernizr enables HTML5 elements & feature detects; 
        for optimal performance, create your own custom Modernizr build: www.modernizr.com/download/ -->
-  <script src="<?php bloginfo( "template_url" ); ?>/js/modernizr-2.0.6.min.js"></script>
+  <script src="<?php bloginfo( "template_url" ); ?>/js/modernizr-2.5.3.min.js"></script>
   <?php wp_head(); ?>
 </head>
 
-<body>
+<body <?php body_class(); ?>>
   <header role="banner">
-    <h1><a href="<?php echo get_option('home'); ?>"><?php bloginfo( "name" ) ?></a></h1>
-    <nav>
-    <?php wp_nav_menu( array( 'theme_location' => 'header-menu', 
-                                'container' => 'false', 
-                                'menu_class' => 'wp-menu',
-                                'items_wrap' => '<ul id="%1$s" class="%2$s">'."\n".'%3$s    </ul>'."\n".'%0A',
-                                'walker' => new MV_Cleaner_Walker_Nav_Menu()) ); ?>
-    </nav>
-    <a class="improveon" href="http://improve-on.com/submit/danny-t.co.uk">Improve-on this site</a>
-    <div class='menu-button'><a>menu</a></div>
+    <h1>
+    	<a href="<?php echo get_option('home'); ?>">
+    		<?php bloginfo( "name" ) ?>
+    	</a>
+    </h1>
+    <ul class="contact_buttons">
+  		<li><a href="http://www.myspace.com/tinderboxacoustic" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/myspace_icon.jpg" alt="Visit our MySpace page"></a></li>
+  		<li><a href="http://www.facebook.com/pages/Tinderbox/13641657894" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/facebook_icon.jpg" alt="Visit our Facebook page"></a></li>
+  		<li><a href="http://www.youtube.com/tinderboxacoustic" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/youtube_icon.jpg" alt="Subscribe to Tindebox on YouTube"/></a></li>
+  		<li><a href="http://www.twitter.com/tinderboxduo" target="_blank"><img src="http://twitter-badges.s3.amazonaws.com/t_small-a.png" alt="Follow Tindebox on Twitter"/></a></li>
+	</ul>
   </header>
   
   <div role="main" class="main">
