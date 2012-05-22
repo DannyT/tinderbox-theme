@@ -43,6 +43,10 @@ a:visited
 	color: gray;
 }
 
+ul {
+    list-style-type: none;
+}
+
 .clear
 {
 	clear: both;
@@ -73,7 +77,7 @@ img.alignright
 
 /* Header */
 
-header h1{
+header[role="banner"] h1{
 	background: url(../images/tinderbox_hdr.jpg) no-repeat;
 	font-size: 436px;
 	margin: 0;
@@ -128,7 +132,7 @@ ul.contact_buttons li {
 	width: 750px;
 }
 
-#content h2
+#content h1, h2
 {
 	font-size:2.5em;
 	font-weight: 400;
@@ -259,4 +263,22 @@ ul.contact_buttons li {
 {
 	font-size: 1.2em;
 	font-weight: bold;
+}
+
+/* Marketpress */
+#mp_product_list img
+{
+	margin-right:10px;
+}
+
+.mp_product_image_link
+{
+	display: none;
+}
+
+.mp_checkout {
+	line-height: 40px;
+	background: url(../images/basket.png) no-repeat 0 2px;
+	margin-right: 10px;
+	padding: 0px 0px 0px 20px;
 }

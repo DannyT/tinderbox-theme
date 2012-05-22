@@ -23,7 +23,7 @@
 
 	<!-- css information -->
 	<property name="css.dir" value="${deploy.dir}/css" />
-	<property name="css.src.dir" value="${scripts.dir}/css" />
+	<property name="css.src.dir" value="scripts/css" />
 
 	<!-- js information -->
 	<property name="js.dir" value="${deploy.dir}/js" />
@@ -51,10 +51,10 @@
 		any bottleneck that can be caused by too many css / js requests on load.
 	-->	
 	<target name="css">
-		<concat destfile="${deploy.dir}/style.css" overwrite="yes">
+		<concat destfile="${css.dir}/style.css" overwrite="yes">
 			<fileset file="${css.src.dir}/theme-info.css" />
 			<fileset file="${css.src.dir}/normalize.css" />
-			<fileset file="${css.dir}/style.css" />
+			<fileset file="${css.src.dir}/style.css" />
 		</concat>
 	</target>
 
