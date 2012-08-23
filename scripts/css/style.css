@@ -235,6 +235,12 @@ ul.contact_buttons li {
 }
 
 /* Menu */
+
+#sidebar ul, ol 
+{
+	padding: 0 0 0 0px; 
+}
+
 #sidebar ul ul li:before
 {
 	content: "\00BB \0020";
